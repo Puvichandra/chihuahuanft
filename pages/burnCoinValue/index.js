@@ -8,13 +8,14 @@ function BurnCoinValuePage(props) {
     const nftContract=process.env.NEXT_PUBLIC_NFT_CONTRACT
     const [burncoinlist,setBurntCoinList] = useState([])
 
-    // useEffect(()=>{
-    //     setInterval(()=>{
-    //       if(props.caddres!=="Connect Wallet"){
-    //         setTokenContract(new ethers.Contract(nftContract,abi,props.csigner));
-    //         }
-    //     },2000) 
-    //    },[props.caddres])
+    useEffect(()=>{
+        
+          if(props.caddres!=="Connect Wallet"){
+            setTokenContract(new ethers.Contract(nftContract,abi,props.csigner));
+           
+            }
+       
+       },[props.caddres])
 
 
  const findBurnCollection=async ()=>{
@@ -22,11 +23,16 @@ function BurnCoinValuePage(props) {
     let result=[];
     if(props.caddres==="Connect Wallet"){
         alert("Please Connect to wallet")
+        return
+    }else{
+       
+        setTokenContract(new ethers.Contract(nftContract,abi,props.csigner));
     }
-      await setTokenContract(new ethers.Contract(nftContract,abi,props.csigner));
+      
+      
     for (let i=0;i<20;i++){
         try{
-            //console.log(tokenContract)
+            setTokenContract(new ethers.Contract(nftContract,abi,props.csigner));
             if(tokenContract!=null){
                 const adress=await tokenContract.burntAddress(i);
                 newlist.push(adress)
@@ -40,25 +46,25 @@ function BurnCoinValuePage(props) {
         }
     }
 
+    
         try{
        let lstcount=newlist.length;
-       //console.log(lstcount)
        for( let k=0;k<lstcount;k++) {
         const address=newlist[k];
-        //console.log(address)
-        if(tokenContract!=null){
+          if(tokenContract!=null){
             const burntval=await tokenContract.getBurntValue(address)
             const newslt={
                "address":address,
-               "bnbval":Number(burntval)/100000000000000000
+               "bnbval":Number(burntval/1000000000000000000).toFixed(5)
             }
 
           result.push(newslt)  
           }  
-         // console.log(result)
-          setBurntCoinList(result);
+         
+         
        
        }    
+       setBurntCoinList(result);
 
         } catch(e){
             console.log("error2")
@@ -97,9 +103,9 @@ function BurnCoinValuePage(props) {
          </thead>
          <tbody>
           
-     {burncoinlist.map((item)=>
-  <tr key={item.id}>
-     
+     {burncoinlist.map((item,index)=>
+  <tr key={index}>
+  
      <td className="text-xs xl:text-sm  font-light px-2 xl:px-6 py-4 whitespace-pre-wrap ">{item.address}</td>
      <td className="text-xs xl:text-sm  font-light px-2 xl:px-6 py-4 ">{item.bnbval}</td>
    

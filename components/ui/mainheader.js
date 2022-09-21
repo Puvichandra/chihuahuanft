@@ -40,7 +40,11 @@ function MainHeader(props){
 
                                    <Link  href="/nftTopHolders"><a className="text-txtborderColor  font-poppins dark:text-white  hover:bg-lightgrey dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium xl:text-sm 2xl:text-md" style={{marginLeft:"auto"}} >
                                    Leader Board</a></Link>
+
+                                   <Link  href="/claimRewards"><a className="text-txtborderColor  font-poppins dark:text-white  hover:bg-lightgrey dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium xl:text-sm 2xl:text-md" style={{marginLeft:"auto"}} >
+                                   Claim Rewards</a></Link>
                                    
+                                 
                              
                                    <Login className="text-white" waddress={props.waddress} wprovider={props.wprovider} wsigner={props.wsigner}/> 
 
@@ -61,13 +65,19 @@ function MainHeader(props){
                                 <Image className='relative z-30 inline object-cover w-12 h-12 border-20 border-white rounded-full' src="/img/logochi.png" alt="Workflow" width={70} height={70}/>
                                 </a></Link>
                         <div >
-                        <button className="text-white dark:text-white hover:text-gray-300 inline-flex items-end justify-end p-2 rounded-md focus:outline-none mobile-menu-button"
+                        <div className='inline-block '>
+                        <Login className="text-white" waddress={props.waddress} wprovider={props.wprovider} wsigner={props.wsigner}/> 
+                        </div>
+                        
+                        <div className='inline-block align-middle'>
+                        <button className="text-white dark:text-white hover:text-gray-300 inline-flex items-center justify-end p-2 rounded-md focus:outline-none mobile-menu-button"
                         onClick={() => setShow((s) => !s)}>
                             <svg width="20" height="20" fill="currentColor" className="h-8 w-8" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z">
                                 </path>
                             </svg>
                         </button>
+                        </div>
                       </div>
                     </div>
                 </div>
@@ -84,8 +94,12 @@ function MainHeader(props){
                 <Link  href="/nftTopHolders"><a className="text-white font-poppins dark:text-white  hover:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium block">
                 Leader Board
                 </a></Link>
+
+                <Link  href="/claimRewards"><a className="text-white font-poppins dark:text-white  hover:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium block">
+                Claim Rewards
+                </a></Link>
   
-                <Login className="text-white" waddress={props.waddress} wprovider={props.wprovider} wsigner={props.wsigner}/> 
+               
     
 
                 

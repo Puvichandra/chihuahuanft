@@ -94,6 +94,11 @@ const getCommon= async()=>{
 
 }
 
+const getData=()=>{
+    fetch(process.env.NEXT_PUBLIC_GET_FROM_BC).then((res)=>res.json()).then((data)=> alert(data.message));
+}
+
+
 
   return (
     
@@ -103,6 +108,7 @@ const getCommon= async()=>{
            </div>:null}
 
         <button className="text-2xl bg-slate-800 text-white p-5 rounded-xl" onClick={()=>getCommon()}>Update</button>
+        <button className="text-2xl bg-slate-800 text-white p-5 rounded-xl" onClick={()=>getData()}>NFT Top holders Update</button>
     <div className='flex flex-rows flex-wrap justify-items-stretch justify-center  mt-5'>
     <div className="basis-4/12">
     

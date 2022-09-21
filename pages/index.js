@@ -80,7 +80,7 @@ const getTokenData= async ()=>{
 
  
   async function minttoken(nftNumber,publicPrice){
-   console.log(nftNumber);
+   //console.log(nftNumber);
     let transaction;
       if(nftNumber<=0){
          alert("Please Enter positive number" );
@@ -103,12 +103,13 @@ const getTokenData= async ()=>{
             return;}
          } catch(err) {
               try{
-                alert(err.data.message);
+                alert(err.error.data.message);
+                return;
               } catch (err){
-                console.log(err);
+                alert(err.error.data.message);
+                return;
               }
-            console.log(err)
-            return;
+            
         }
      
   }

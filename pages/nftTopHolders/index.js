@@ -5,7 +5,7 @@ function NftTopHoldersPage() {
     const [holders,setHolders] = useState([])
     const [timeCaptured,setTimeCaptured] = useState('')
     const getData=()=>{
-        fetch(process.env.NEXT_PUBLIC_GET_HOLDERS).then((res)=>res.json()).then((data)=>{setHolders(data.topholders);console.log(data.topholders)})
+        fetch(process.env.NEXT_PUBLIC_GET_HOLDERS).then((res)=>res.json()).then((data)=>{setHolders(data.topholders);})
     }
 
     useEffect(()=>{

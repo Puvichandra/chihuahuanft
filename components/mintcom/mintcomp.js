@@ -125,18 +125,18 @@ export default function Mintcomponent(props) {
   <div className='text-center font-Press text-white py-5 text-2xl xl:text-4xl'>MINT YOUR NFT</div>
  
 
-  <div className='text-center text-white text-lg xl:text-2xl font-Press'> Value: {props.publicPrice/100000000000000000}  bnb</div>
+  <div className='text-center text-white text-lg xl:text-2xl font-Press'> Value: {props.publicPrice/1000000000000000000}  bnb</div>
    <div className="flex flex-row justify-center gap-2 py-5">
-   <div className='basis-2/12 text-center hover:bg-red-400  bg-red-300 rounded-full'>
-    <button className='h-10 xl:h-16 text-2xl xl:text-4xl'  onClick={()=>calculateValue("-")}> - </button>
+   <div className='basis-2/12 text-center hover:bg-red-400  bg-red-300 rounded-full' onClick={()=>calculateValue("-")}>
+    <button className='h-10 xl:h-16 text-2xl xl:text-4xl'  > - </button>
    </div>
    <div className='basis-6/12 h-10 xl:h-16 text-center bg-white   '>
     <button className='h-10 xl:h-16 text-2xl xl:text-4xl font-Press'> {count}</button>
    </div>
 
    
-   <div className='basis-2/12 text-center hover:bg-red-400 bg-red-300 rounded-full'>
-    <button className='h-10 xl:h-16 text-2xl xl:text-4xl'  onClick={()=>calculateValue("+")}> + </button>
+   <div className='basis-2/12 text-center hover:bg-red-400 bg-red-300 rounded-full' onClick={()=>calculateValue("+")}>
+    <button className='h-10 xl:h-16 text-2xl xl:text-4xl'  > + </button>
    </div>
 
 

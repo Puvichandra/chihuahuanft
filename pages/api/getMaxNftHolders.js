@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export default async function handler(req, res) {
     
-   const address = '0x7C376EF0F9eE4Ac618e6Adb32b46a5C306F35cE3';
+   const address = process.env.NEXT_PUBLIC_NFT_CONTRACT;
    // const address = '0x8D7B8680a042eC7f667AEeb7De2CD1EF472373D8';
    const chain= "bsc";
     var nftsData=[];
@@ -16,7 +16,7 @@ export default async function handler(req, res) {
         if (cursor!=null) { 
           time++
 
-        await axios.get(`https://deep-index.moralis.io/api/v2/nft/${address}/owners?chain=bsc&format=decimal&cursor=${cursor}`,
+        await axios.get(`https://deep-index.moralis.io/api/v2/nft/${address}/owners?chain=bsc%20testnet&format=decimal&cursor=${cursor}`,
          {
             headers:{
                 accept:"application/json",
