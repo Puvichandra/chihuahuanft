@@ -11,7 +11,7 @@ const [tokenContract,setTokenContract]=useState(props.tokenContract)
 const [rewardsCollected,setrewardsCollected] = useState(0)
 const [claimRewards,setClaimRewards] = useState(0)
 const [counter,setCounter] = useState(0)
-const divisor=100000000000000000
+const divisor=1000000000000000000
 
 useEffect(()=>{
     if(props.caddres!=="Connect Wallet"){
