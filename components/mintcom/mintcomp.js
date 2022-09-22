@@ -127,7 +127,7 @@ export default function Mintcomponent(props) {
 <div className='text-center font-Press text-black py-5 text-2xl xl:text-4xl'>MINT YOUR NFT</div>
 
 
-<div className='text-center text-black text-lg xl:text-2xl font-Press'> Value: {props.publicPrice/100000000000000000}  bnb</div>
+<div className='text-center text-black text-lg xl:text-2xl font-Press'> Value: {props.publicPrice/1000000000000000000}  bnb</div>
  <div className="flex flex-row justify-center  gap-5 py-5">
  <div className='basis-2/12 text-center eightbit-btn' onClick={()=>calculateValue("-")}>
   <button className='h-10 xl:h-16 text-2xl xl:text-4xl' > - </button>
