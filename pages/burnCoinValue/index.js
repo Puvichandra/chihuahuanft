@@ -74,16 +74,20 @@ function BurnCoinValuePage(props) {
  }
 
 
- return <div className="h-screen py-20 bg-gray-500">
+ return <div className="h-screen py-20 bg-gray-500 mint__page">
       
     
             
  <div className="pb-4 2xl:px-96  text-white text-md xl:text-xl">
-   <div className='inline-block pl-10'>
-    <button className= 'bg-slate-800 text-center rounded-2xl px-2 xl:px-10 py-2' onClick={()=>findBurnCollection()}>Update</button>
-  </div>
-<div className="pl-10 pb-4 inline-block">List of Burnt Coins</div>
-<div className="flex flex-col bg-transparent mx-4 border-bodygray border-solid border-2 rounded-xl shadow-xl shadow-white">
+  
+   
+   <div className='inline-block pl-10 mint__container other__container red__button '>
+    <button className= 'text-center px-2 xl:px-10 py-2 eightbit-btn eightbit-btn--reset' onClick={()=>findBurnCollection()}>Update</button>
+<div className="pl-10 pb-4 inline-block burnt__list">List of Burnt Coins</div>
+ 
+
+</div>
+<div className="flex flex-col bg-transparent mx-4 border-bodygray border-solid border-2 rounded-xl shadow-xl shadow-white text-black mint__card">
  <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
    <div className="inline-block min-w-full sm:px-6 lg:px-8 ">
      <div >
@@ -91,7 +95,7 @@ function BurnCoinValuePage(props) {
          <thead className="bg-bodygray border-b font-poppins">
            <tr className="text-txtborderColor">
            <th scope="col" className="text-xs xl:text-sm  font-medium px-2 xl:px-6 xl:py-4 text-left">
-          Address
+          Token Address
          </th>
         <th scope="col" className="text-xs xl:text-sm  font-medium px-2 xl:px-6 xl:py-4 text-left">
             Burnt Value(bnb)
@@ -117,6 +121,7 @@ function BurnCoinValuePage(props) {
        </table>
      </div>
    </div>
+   </div>
  </div>
 </div>
  
@@ -124,8 +129,6 @@ function BurnCoinValuePage(props) {
 
 
 
-
-</div>
 }
 
 export default BurnCoinValuePage

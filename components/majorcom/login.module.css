@@ -4,14 +4,15 @@
     border: 1px solid white;
     padding: 1rem 2.5rem;
     border-radius: 2rem;
-    transition: var(--transition);
+    transition: all 300ms ease;
     position: relative;
     z-index: 5;
 }
 
 .connect__wallet:hover{
-    background: var(--color-dark);
+    background: white;
     border: none;
+    color: rgb(0, 0, 0);
     box-shadow: var(--box-shadow);
 }
 

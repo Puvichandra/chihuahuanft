@@ -1,6 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap%27');
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
+.nav__bar{
+    background: transparent;
+    position: absolute;    
+    top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   }
+   .nav__container{
+       background: #7a6cbd;
+   border-radius: 2.5rem;
+   /* border: 1px solid white; */
+   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}  
+/* width: max-content; */
+
+.mint__page{
+   font-family: 'Press Start 2P', cursive;
+   padding-top: 5%;
+   /* padding-bottom: 2rem; */
+   /* height: 100vh; */
+   min-height: 100vh;
+   background: #8c7ddb;
+   /* background-image: url('../assets/pattern1.png');    */
+}
+
+
+
+.mint__container{
+   padding-top: 3rem;
+}
+
+.other__container{
+    padding-top: 5rem;
+}
+.mint__card{
+   background: white;
+   box-shadow: rgba(0, 0, 0, 1) -5px 5px, rgba(0, 0, 0, 1) -10px 15px, rgba(12, 11, 12, 0) -15px 15px, rgba(0, 0, 0, 0) -20px 20px, rgba(12, 10, 11, 0) -25px 25px;
+
+}
+
+.sale__text{
+    
+   text-shadow: rgba(0, 0, 0, 1) -5px 5px, rgba(0, 0, 0, 1) -10px 15px, rgba(12, 11, 12, 0) -15px 15px, rgba(0, 0, 0, 0) -20px 20px, rgba(12, 10, 11, 0) -25px 25px;
+   
+}
+.whitelist__text{
+   /* text-shadow: rgba(0, 0, 0, 1) -5px 5px, rgba(0, 0, 0, 1) -10px 5px, rgba(12, 11, 12, 0) -15px 15px, rgba(0, 0, 0, 0) -20px 20px, rgba(12, 10, 11, 0) -25px 25px; */
+}
+.top__burn{
+    display: flex;
+    align-items: center;
+}
+
+.claim__container > div{
+    font-size: 1.5rem;
+}
+.claim__button.eightbit-btn{
+    padding: 20px;
+    font-size: 25px;
+}
+
+  .eightbit-btn {
+   background: #92CD41;
+   display: inline-block;
+   position: relative;
+   text-align: center;
+   font-size: 20px;
+   padding: 5px;
+   font-family: "Press Start 2P", cursive;
+   text-decoration: none;
+   color: white;
+   box-shadow: inset -4px -4px 0px 0px #4AA52E;
+ }
+ .eightbit-btn:hover, .eightbit-btn:focus {
+   background: #76c442;
+   box-shadow: inset -6px -6px 0px 0px #4AA52E;
+ }
+ .eightbit-btn:active {
+   box-shadow: inset 4px 4px 0px 0px #4AA52E;
+ }
+ .eightbit-btn:before, .eightbit-btn:after {
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   box-sizing: content-box;
+ }
+ .eightbit-btn:before {
+   top: -6px;
+   left: 0;
+   border-top: 6px black solid;
+   border-bottom: 6px black solid;
+ }
+ .eightbit-btn:after {
+   left: -6px;
+   top: 0;
+   border-left: 6px black solid;
+   border-right: 6px black solid;
+ }
+ .eightbit-btn--reset {
+   background: #E76E55;
+
+   box-shadow: inset -4px -4px 0px 0px #8C2022;
+ }
+ .eightbit-btn--reset:hover, .eightbit-btn--reset:focus {
+   background: #CE372B;
+   box-shadow: inset -6px -6px 0px 0px #8C2022;
+ }
+ .eightbit-btn--reset:active {
+   box-shadow: inset 4px 4px 0px 0px #8C2022;
+ }
+ .eightbit-btn--proceed {
+   background: #F7D51D;
+   box-shadow: inset -4px -4px 0px 0px #E59400;
+ }
+ .eightbit-btn--proceed:hover, .eightbit-btn--proceed:focus {
+   background: #F2C409;
+   box-shadow: inset -6px -6px 0px 0px #E59400;
+ }
+ .eightbit-btn--proceed:active {
+   box-shadow: inset 4px 4px 0px 0px #E59400;
+ }
+ 
+ *, *:before, *:after {
+   box-sizing: border-box;
+ }
+
+ .poster__container{
+   /* position: fixed; */
+   bottom: 0;
+   right: 0;
+   /* width: 0vw; */
+   display: flex;
+   z-index: 0;
+   /* justify-content: center; */
+   /* transform: translateY(-30%); */
+}
+.poster__container img{
+     object-fit: cover;
+   width: 100%;
+ }
+
+
+ @media (max-width: 1030px) {
+
+.nav__container{
+   width: 98vw;
+   
+}
+.menu__container{
+    display: none;
+}
+.mint__container{
+    padding-top: 6rem;
+}
+.claim__container > div{
+    font-size: 1.5rem;
+}
+
+
+ }
+
+ @media (max-width: 930px) {
+
+    .reward__container{
+        flex-direction: column;
+        gap: 3rem;
+      
+    }
+   
+    .claim__container > div{
+        font-size: 1.3rem;
+    }
+    .claim__card{
+        width: 90vw;
+    }
+
+}
+        
+
+ @media (max-width: 520px) {
+
+  
+
+    .red__button{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 90vw;
+        padding-bottom: 2rem;
+        margin-top: 2rem;
+      
+    }
+    .red__button button{
+        width: max-content;
+    }
+    .burnt__list{
+        width: 90vw;
+       transform: translateX(-10%);
+
+    }
+    .claim__button.eightbit-btn{
+        padding: 15px;
+        font-size: 15px;
+    }
+
+
+ }

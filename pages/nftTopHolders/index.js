@@ -30,13 +30,13 @@ function NftTopHoldersPage() {
       //   }
       // }
 
-      return <div className="py-20 bg-gray-500">
+      return <div className="py-20 bg-gray-500 mint__page">
       
     
             
-        <div className="pb-4 xl:px-80  text-white ">
+        <div className="pb-4 xl:px-80  text-white mint__container other__container ">
         {holders.length>0?<div className="px-5 xl:pl-10 pb-4 text-md xl:text-2xl">Top Holders as of {timeCaptured} </div>:null}
-      <div className="flex flex-col bg-transparent mx-4 border-bodygray border-solid border-2 rounded-xl shadow-xl shadow-white">
+      <div className="flex flex-col bg-transparent mx-4 border-bodygray border-solid border-2 rounded-xl shadow-xl shadow-white mint__card text-black">
         <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="inline-block min-w-full sm:px-6 lg:px-8 ">
             <div >
@@ -47,7 +47,7 @@ function NftTopHoldersPage() {
                 id
               </th>
               <th scope="col" className="text-xs xl:text-sm  font-medium  px-2 xl:px-6 py-4 text-left">
-                Address
+              Address
               </th>
               <th scope="col" className="text-xs xl:text-sm   font-medium  px-2 xl:px-6 py-4 text-left">
                No Of NFT

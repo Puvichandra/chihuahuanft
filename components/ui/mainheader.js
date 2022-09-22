@@ -16,8 +16,8 @@ function MainHeader(props){
 //   })
   
     return (
-        <div className="sticky top-0 z-50 bg-gray-900 text-white">
-        <nav className='bg-nftColor'>
+        <div className="sticky top-0 z-50 bg-gray-900 text-white nav__bar">
+        <nav className='bg-nftColor nav__container'>
             <div className="max-w-9xl mx-auto px-8">
                 <div className="flex items-center justify-center h-20">
                     <div className=" flex items-center">
@@ -32,7 +32,7 @@ function MainHeader(props){
                                 {/* <Link href="/"><a className="text-black font-poppins dark:hover:text-white px-3 py-2 rounded-md text-4xl font-bold -mt-2 xl:text-4xl xl:px-0"  >
                                     Market Place<span className="text-4xl text-txtred">.</span></a></Link> */}
                             
-                                <Link  href="/"><a className="text-txtborderColor font-poppins  hover:bg-lightgrey dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium xl:text-sm 2xl:text-md"  >
+                                <Link  href="/"><a className="text-txtborderColor font-poppins hover:bg-lightgrey dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium xl:text-sm 2xl:text-md"  >
                                     Home </a></Link>
 
                                 <Link  href="/burnCoinValue"><a className="text-txtborderColor  font-poppins dark:text-white  hover:bg-lightgrey dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium xl:text-sm 2xl:text-md" style={{marginLeft:"auto"}} >
@@ -54,7 +54,7 @@ function MainHeader(props){
                         </div>
                     </div>
                   
-                    <div className="flex w-full flex-row lg:hidden items-center justify-between mt-10 pb-5">
+                    <div className="flex w-full flex-row lg:hidden items-center justify-between mt-5 pb-5">
                         {/* <div className="items-start">
                         <a className="text-white font-poppins hover:text-gray-400 dark:hover:text-white px-3 py-2 rounded-md text-2xl font-bold -mt-2"  >
                                     jellyfork<span className="text-4xl text-txtred">.</span></a>

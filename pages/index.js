@@ -106,7 +106,8 @@ const getTokenData= async ()=>{
                 alert(err.error.data.message);
                 return;
               } catch (err){
-                alert(err.error.data.message);
+                
+                console.log(err);
                 return;
               }
             

@@ -115,8 +115,10 @@ async function disconnect () {
 
   return (
  
-    <button  onClick={!isopen?connectwallet:disconnect } className={classes.connect__wallet}> {btncaption}   
-   </button> 
+
+   <button  onClick={!isopen?connectwallet:disconnect } className={classes.connect__wallet}> {btncaption}   
+    </button> 
+ 
   
     
   )
