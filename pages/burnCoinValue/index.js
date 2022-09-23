@@ -7,13 +7,15 @@ function BurnCoinValuePage(props) {
     const [tokenContract,setTokenContract] = useState(null)
     const nftContract=process.env.NEXT_PUBLIC_NFT_CONTRACT
     const [burncoinlist,setBurntCoinList] = useState([])
+    const [coindb, setcoindb]=useState([])
 
     useEffect(()=>{
         
           if(props.caddres!=="Connect Wallet"){
             setTokenContract(new ethers.Contract(nftContract,abi,props.csigner));
-           
-            }
+              }
+
+          fetch('api/getBurncoinname').then((res)=>res.json()).then(data=>setcoindb(data.burnnames))
        
        },[props.caddres])
 
@@ -34,9 +36,11 @@ function BurnCoinValuePage(props) {
         try{
             setTokenContract(new ethers.Contract(nftContract,abi,props.csigner));
             if(tokenContract!=null){
-                const adress=await tokenContract.burntAddress(i);
+                const adress=await tokenContract.burntAddress(i) ;
+               // const newad=coindb.find( async ({coinaddress})=>coinaddress===await tokenContract.burntAddress(i)) ;
+              
                 newlist.push(adress)
-               // console.log(adress)
+               
               }  
         } catch(e){
             
@@ -54,7 +58,9 @@ function BurnCoinValuePage(props) {
           if(tokenContract!=null){
             const burntval=await tokenContract.getBurntValue(address)
             const newslt={
-               "address":address,
+              // "address":address,
+               "address":coindb.find(({coinaddress})=>coinaddress===address).coinname,
+               
                "bnbval":Number(burntval/1000000000000000000).toFixed(5)
             }
 
@@ -64,6 +70,7 @@ function BurnCoinValuePage(props) {
          
        
        }    
+      // console.log(result)
        setBurntCoinList(result);
 
         } catch(e){
@@ -72,7 +79,6 @@ function BurnCoinValuePage(props) {
 
    
  }
-
 
  return <div className="h-screen py-20 bg-gray-500 mint__page">
       
